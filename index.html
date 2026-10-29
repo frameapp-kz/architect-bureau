@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Orda — Architectural Bureau Catalog</title>
+  <meta name="description" content="Digital portfolio of the Atelier Orda architectural bureau: implemented projects, design stages and a project requirements form.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-switch" class="visually-hidden" aria-hidden="true" tabindex="-1">
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Atelier Orda — home">
+      <img src="images/logo.svg" alt="" width="40" height="40">
+      <span>ATELIER ORDA</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <input type="checkbox" id="nav-toggle" class="visually-hidden">
+      <label class="burger" for="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <article class="hero-content">
+        <p class="eyebrow">Architectural bureau · Astana</p>
+        <h1 id="hero-title">Designing Space for Living</h1>
+        <p class="lead">We survey, design and build houses, public buildings and landscapes that stay comfortable for decades.</p>
+        <a class="cta" href="#projects">Open the portfolio</a>
+      </article>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <header class="section-head">
+        <h2 id="projects-title">Implemented projects</h2>
+        <p>Selected buildings with their key parameters.</p>
+      </header>
+      <section class="grid" aria-label="Project cards">
+        <article class="card card-wide">
+          <img src="images/project-1.webp" alt="Render of the Nomad Residence apartment complex" loading="lazy">
+          <h3>Nomad Residence</h3>
+          <dl>
+            <dt>Area</dt><dd>12 400 m²</dd>
+            <dt>Year</dt><dd>2024</dd>
+            <dt>Location</dt><dd>Astana, Kazakhstan</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <img src="images/project-2.webp" alt="Render of the Steppe House private villa" loading="lazy">
+          <h3>Steppe House</h3>
+          <dl>
+            <dt>Area</dt><dd>380 m²</dd>
+            <dt>Year</dt><dd>2023</dd>
+            <dt>Location</dt><dd>Karaganda, Kazakhstan</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <img src="images/project-3.webp" alt="Render of the Green Atrium business centre" loading="lazy">
+          <h3>Green Atrium</h3>
+          <dl>
+            <dt>Area</dt><dd>5 900 m²</dd>
+            <dt>Year</dt><dd>2022</dd>
+            <dt>Location</dt><dd>Almaty, Kazakhstan</dd>
+          </dl>
+        </article>
+        <article class="card card-tall">
+          <img src="images/project-4.webp" alt="Render of the Silk Road Library" loading="lazy">
+          <h3>Silk Road Library</h3>
+          <dl>
+            <dt>Area</dt><dd>3 200 m²</dd>
+            <dt>Year</dt><dd>2021</dd>
+            <dt>Location</dt><dd>Shymkent, Kazakhstan</dd>
+          </dl>
+        </article>
+        <article class="card card-wide">
+          <img src="images/project-5.webp" alt="Render of the Lakeside Pavilion" loading="lazy">
+          <h3>Lakeside Pavilion</h3>
+          <dl>
+            <dt>Area</dt><dd>860 m²</dd>
+            <dt>Year</dt><dd>2020</dd>
+            <dt>Location</dt><dd>Burabay, Kazakhstan</dd>
+          </dl>
+        </article>
+      </section>
+    </section>
+
+    <section id="services" class="section alt" aria-labelledby="services-title">
+      <header class="section-head">
+        <h2 id="services-title">Services &amp; design stages</h2>
+        <p>From the first site survey to the keys handover.</p>
+      </header>
+      <ol class="stages">
+        <li><h3>1. Survey</h3><p>Topography, soil and communications analysis of the site.</p></li>
+        <li><h3>2. Concept</h3><p>Massing studies, plans and 3D renders for approval.</p></li>
+        <li><h3>3. Documentation</h3><p>Working drawings, structural and engineering sections.</p></li>
+        <li><h3>4. Supervision</h3><p>Author supervision on site until commissioning.</p></li>
+      </ol>
+    </section>
+
+    <section id="philosophy" class="section" aria-labelledby="philosophy-title">
+      <article class="quote">
+        <h2 id="philosophy-title">Philosophy</h2>
+        <p>A building is a long conversation between light, material and the people who live in it. We design less, but we design it carefully.</p>
+      </article>
+    </section>
+
+    <section id="contacts" class="section alt" aria-labelledby="form-title">
+      <header class="section-head">
+        <h2 id="form-title">Tell us about your project</h2>
+        <p>Fill in the requirements and we will contact you within one working day.</p>
+      </header>
+      <form class="form" action="#" method="post">
+        <label for="name">Name
+          <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" required minlength="2">
+        </label>
+        <label for="phone">Phone
+          <input id="phone" name="phone" type="tel" placeholder="+7 701 000 00 00" autocomplete="tel" required pattern="[+0-9 ()\-]{10,}">
+        </label>
+        <label for="email">Email
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </label>
+        <label for="area">Building Area (m²)
+          <input id="area" name="area" type="number" min="10" step="1" placeholder="e.g. 250" required>
+        </label>
+        <label for="budget">Budget Constraints (USD)
+          <input id="budget" name="budget" type="number" min="1000" step="500" placeholder="e.g. 150000" required>
+        </label>
+        <button type="submit" class="cta">Send requirements</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section aria-labelledby="cert-title">
+      <h2 id="cert-title">Registration</h2>
+      <ul>
+        <li>State licence No. 18012345, category I</li>
+        <li>Member of the Union of Architects of Kazakhstan</li>
+        <li>ISO 9001:2015 certified</li>
+      </ul>
+    </section>
+    <nav aria-labelledby="pub-title">
+      <h2 id="pub-title">Publications</h2>
+      <ul>
+        <li><a href="https://www.archdaily.com" rel="noopener">ArchDaily</a></li>
+        <li><a href="https://www.dezeen.com" rel="noopener">Dezeen</a></li>
+        <li><a href="https://www.designboom.com" rel="noopener">Designboom</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="theme-title">
+      <h2 id="theme-title">Appearance</h2>
+      <label class="switch" for="theme-switch">
+        <span class="track" aria-hidden="true"></span>
+        <span>Monochrome dark theme</span>
+      </label>
+    </section>
+    <p class="legal">© 2026 Atelier Orda LLP. All rights reserved. Student project, ICT6001.</p>
+  </footer>
+</body>
+</html>
